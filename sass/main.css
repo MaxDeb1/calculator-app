@@ -1,0 +1,350 @@
+/* ### Body Font-size */
+/* ### Font */
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+[data-theme="theme1"] {
+  /* #### Backgrounds */
+  --MainBg: hsl(222, 26%, 31%);
+  --ToggleKeypadBg: hsl(223, 31%, 20%);
+  --ScreenBg: hsl(224, 36%, 15%);
+  /* #### Keys */
+  --ACKeyBg: hsl(225, 21%, 49%);
+  --ACKeyShadow: hsl(224, 28%, 35%);
+  --EqualKeyBg: hsl(6, 63%, 50%);
+  --EqualKeyShadow: hsl(6, 70%, 34%);
+  --KeyBg: hsl(30, 25%, 89%);
+  --KeyShadow: hsl(28, 16%, 65%);
+  /* #### Text */
+  --Display: hsl(0, 0%, 100%);
+  --Key: hsl(221, 14%, 31%);
+  --EqualKey: hsl(0, 0%, 100%);
+}
+
+[data-theme="theme2"] {
+  /* #### Backgrounds */
+  --MainBg: hsl(0, 0%, 90%);
+  --ToggleKeypadBg: hsl(0, 5%, 81%);
+  --ScreenBg: hsl(0, 0%, 93%);
+  /* #### Keys */
+  --ACKeyBg: hsl(185, 42%, 37%);
+  --ACKeyShadow: hsl(185, 58%, 25%);
+  --EqualKeyBg: hsl(25, 98%, 40%);
+  --EqualKeyShadow: hsl(25, 99%, 27%);
+  --KeyBg: hsl(30, 25%, 89%);
+  --KeyShadow: hsl(35, 11%, 61%);
+  /* #### Text */
+  --Display: hsl(60, 10%, 19%);
+  --Key: hsl(60, 10%, 19%);
+  --EqualKey: hsl(0, 0%, 100%);
+}
+
+[data-theme="theme3"] {
+  /* #### Backgrounds */
+  --MainBg: hsl(268, 75%, 9%);
+  --ToggleKeypadBg: hsl(268, 71%, 12%);
+  --ScreenBg: hsl(268, 71%, 12%);
+  /* #### Keys */
+  --ACKeyBg: hsl(281, 89%, 26%);
+  --ACKeyShadow: hsl(285, 91%, 52%);
+  --EqualKeyBg: hsl(176, 100%, 44%);
+  --EqualKeyShadow: hsl(177, 92%, 70%);
+  --KeyBg: hsl(268, 47%, 21%);
+  --KeyShadow: hsl(290, 70%, 36%);
+  /* #### Text */
+  --Display: hsl(52, 100%, 62%);
+  --Key: hsl(52, 100%, 62%);
+  --EqualKey: hsl(198, 20%, 13%);
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'Spartan', sans-serif;
+  background: var(--MainBg);
+}
+
+.container {
+  width: 540px;
+  height: 740px;
+  margin: 0 auto;
+}
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--Display);
+  margin-bottom: 32px;
+}
+
+.top p {
+  font-size: 1.9em;
+}
+
+.theme__number {
+  height: 24px;
+  width: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3px 6px;
+  font-size: 0.75em;
+  color: var(--Display);
+}
+
+.theme__selector {
+  height: 24px;
+  width: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 6px;
+  background-color: var(--ToggleKeypadBg);
+  border-radius: 34px;
+}
+
+.purpose {
+  position: absolute;
+  color: var(--Display);
+  font-size: 0.75em;
+  -webkit-transform: translateX(-80px);
+          transform: translateX(-80px);
+}
+
+.themes__switch {
+  width: 16px;
+  height: 16px;
+}
+
+input, label {
+  position: absolute;
+  cursor: pointer;
+}
+
+input[type=radio] {
+  opacity: 0;
+}
+
+label {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: var(--EqualKeyBg);
+  visibility: hidden;
+}
+
+input[type="radio"]:checked + label {
+  visibility: visible;
+}
+
+.display {
+  width: 540px;
+  height: 130px;
+  margin-bottom: 25px;
+  padding-right: 35px;
+  border-radius: 10px;
+  background-color: var(--ToggleKeypadBg);
+  color: var(--Display);
+  line-height: 130px;
+  font-size: 2.8rem;
+}
+
+.display span {
+  float: right;
+}
+
+.keypad {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 32px;
+  -ms-grid-columns: (100px)[4];
+      grid-template-columns: repeat(4, 100px);
+  -ms-grid-rows: (60px)[5];
+      grid-template-rows: repeat(5, 60px);
+  gap: 28px;
+  width: 540px;
+  height: 480px;
+  font-size: 32px;
+  background-color: var(--ToggleKeypadBg);
+  border-radius: 10px;
+      grid-template-areas: "seven eight nine del" "four five six plus" "one two three minus" "decimal zero divide times" "reset reset equal equal";
+}
+
+.seven {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+.eight {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.nine {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.del {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: del;
+}
+
+.four {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+.one {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.two {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+.three {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+.minus {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: minus;
+}
+
+.decimal {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: decimal;
+}
+
+.zero {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: zero;
+}
+
+.divide {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: divide;
+}
+
+.times {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: times;
+}
+
+.reset {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: reset;
+}
+
+.equal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: equal;
+}
+
+.key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--KeyBg);
+  color: var(--Key);
+  -webkit-box-shadow: 0px 4px 0px 0px var(--KeyShadow);
+  box-shadow: 0px 4px 0px 0px var(--KeyShadow);
+}
+
+.key.del, .key.reset {
+  background-color: var(--ACKeyBg);
+  font-size: 0.6em;
+  color: white;
+  -webkit-box-shadow: 0px 4px 0px 0px var(--ACKeyShadow);
+  box-shadow: 0px 4px 0px 0px var(--ACKeyShadow);
+}
+
+.key.equal {
+  background-color: var(--EqualKeyBg);
+  font-size: 0.6em;
+  color: var(--EqualKey);
+  -webkit-box-shadow: 0px 4px 0px 0px var(--EqualKeyShadow);
+  box-shadow: 0px 4px 0px 0px var(--EqualKeyShadow);
+}
+
+.key:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  -webkit-box-shadow: 0px 0px 0px 0px;
+  box-shadow: 0px 0px 0px 0px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--Display);
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="theme1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="sass/main.css"
+      id="theme1-link"
+    />
+
+  </head>
+  <body>
+    <main class="container">
+      <section class="top">
+        <p>calc</p>
+        <div class="toogle__switch__section">
+          <div class="theme__number">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+          </div>
+          <div class="theme__selector">
+            <div class="purpose">THEME</div>
+
+            <div class="themes__switch">
+              <input id="theme1" type="radio" name="theme" checked/>
+              <label for="theme1"></label>
+            </div>
+
+            <div class="themes__switch">
+              <input id="theme2" type="radio" name="theme" />
+              <label for="theme2"></label>
+            </div>
+
+            <div class="themes__switch">
+              <input id="theme3" type="radio" name="theme" />
+              <label for="theme3"></label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="display"><span>0</span></section>
+
+      <section class="keypad">
+        <div class="key eight">8</div>
+        <div class="key nine">9</div>
+        <div class="key seven">7</div>
+        <div class="key del" data-action="delete">DEL</div>
+        <div class="key four">4</div>
+        <div class="key five">5</div>
+        <div class="key six">6</div>
+        <div class="key plus" data-action="add">+</div>
+        <div class="key one">1</div>
+        <div class="key two">2</div>
+        <div class="key three">3</div>
+        <div class="key minus" data-action="subtract">-</div>
+        <div class="key decimal" data-action="decimal">.</div>
+        <div class="key zero">0</div>
+        <div class="key divide" data-action="divide">/</div>
+        <div class="key times" data-action="multiply">x</div>
+        <div class="key reset" data-action="clear">RESET</div>
+        <div class="key equal" data-action="calculate">=</div>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">MaxDeb1</a>.
+    </footer>
+
+    <script type="text/javascript" src="themes.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
