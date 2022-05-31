@@ -1,5 +1,7 @@
 # Frontend Mentor - Calculator app
 
+[Live site](https://maxdeb1.github.io/calculator-app/)
+
 ![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
